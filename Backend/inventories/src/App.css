@@ -1,0 +1,15 @@
+.background {
+    background-image: url("../src/Images/invt.JPG");
+    padding-bottom: 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.backgrounddd {
+  background-image: url("../src/Images/drug.jpeg");
+  padding-bottom: 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
