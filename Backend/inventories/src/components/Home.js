@@ -13,7 +13,7 @@ export default class Home extends Component {
     this.state={
       inventory:[]
     };
-  }
+  }yth
 
   GeneratePDF =()=>{
     var doc = new jsPDF("landscape", "pt", "a3", "pdf");
