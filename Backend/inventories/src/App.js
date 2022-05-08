@@ -15,6 +15,7 @@ import EditPayment from './components/EditPayment';
 import RetPayment from './components/RetPayment';
 import RetRecord from './components/RetRecord';
 import PaymentDetails from './components/PaymentDetails';
+import RecordDetails from './components/RecordDetails';
 
 
 
@@ -39,6 +40,7 @@ export default class App extends Component{
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
+        <Route extact path="/dw" element={<RecordDetails/>}></Route>
 
         </Routes>
       
