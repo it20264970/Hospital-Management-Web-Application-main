@@ -111,7 +111,7 @@ export default class NavBar extends Component {
             Finance
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="add">Add Financial Details</a></li>
+            <li><a class="dropdown-item" href="addp">Add Financial Details</a></li>
             <li><a class="dropdown-item" href="list">Financial Details List</a></li>
             
             </ul>

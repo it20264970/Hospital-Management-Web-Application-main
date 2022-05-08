@@ -35,7 +35,7 @@ export default class App extends Component{
         <Route exact path="/drug" element ={<DrugDetails/>}/>
         <Route extact path="/list"  element={<RetPayment/>}></Route>
         <Route extact path="/listt"  element={<RetRecord/>}></Route>
-        <Route extact path="/add" element={<CreatePayment/>}></Route>
+        <Route extact path="/addp" element={<CreatePayment/>}></Route>
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
