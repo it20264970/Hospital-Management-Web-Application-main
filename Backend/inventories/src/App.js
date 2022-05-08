@@ -25,6 +25,7 @@ import EditRoom from './components/EditRoom';
 import RoomDetails from './components/RoomDetails';
 import RoomReport from './components/RoomReport';
 import PostReport from './components/PostReport';
+import EditDrug from './components/EditDrug';
 
 
 
