@@ -27,3 +27,19 @@
   background-size: cover;
   background-position: center;
 }
+
+.backgroundpr{
+  background-image: url("../src/images/nowt.jpg");
+  padding-bottom: 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.backgroundtr{
+  background-image: url("../src/images/ttr.jpg");
+  padding-bottom: 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
