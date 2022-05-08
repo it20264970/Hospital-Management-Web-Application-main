@@ -16,16 +16,6 @@ import RetPayment from './components/RetPayment';
 import RetRecord from './components/RetRecord';
 import PaymentDetails from './components/PaymentDetails';
 
-import CreatePost from './components/CreatePost';
-import EditPost from './components/EditPost';
-import PostHome from './components/PostHome';
-import PostDetails from './components/PostDetails';
-import RoomHome from './components/RoomHome';
-import CreateRoom from './components/Createroom';
-import EditRoom from './components/EditRoom';
-import RoomDetails from './components/RoomDetails';
-import RoomReport from './components/RoomReport';
-import PostReport from './components/PostReport';
 
 
 
@@ -50,25 +40,11 @@ export default class App extends Component{
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
-
-        <Route extact path="/postHome" element={<PostHome/>}></Route>
-        <Route extact path="/roomHome" element={<RoomHome/>}></Route>
-        <Route extact path="/addPost" element={<CreatePost/>}></Route>
-        <Route extact path="/editPost/:id" element ={<EditPost/>}></Route>
-        <Route extact path="/post/:id" element={<PostDetails/>}></Route>
-        <Route extact path="/addRoom" element={<CreateRoom/>}></Route>
-        <Route extact path="/editRoom/:id" element ={<EditRoom/>}></Route>
-        <Route extact path="/room/:id" element={<RoomDetails/>}></Route>
-        <Route extact path="/roomReport" element={<RoomReport/>}></Route>
-        <Route extact path="/postReport" element={<PostReport/>}></Route>
+        <Route exact path="/drug" element ={<DrugDetails/>}/>
+        <Route exact path="/edtdrug" element ={<EditDrug/>}/>
 
 
-
-
-      
 </Routes>
-
-
       </div>
       </BrowserRouter>
     )

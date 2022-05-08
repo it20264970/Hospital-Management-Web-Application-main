@@ -16,7 +16,7 @@ componentDidMount(){
 }
 
 retrievePayments(){
-  axios.get("/payments").then(res =>{
+  axios.get("http://localhost:8080/payments").then(res =>{
     if(res.data.success){
       this.setState({
         payments:res.data.existingPayments
@@ -51,7 +51,7 @@ handleSearchArea = (e) =>{
 
   const searchKey = e.currentTarget.value;
          
-  axios.get("/payments").then(res =>{
+  axios.get("http://localhost:8080/payments").then(res =>{
     if(res.data.success){
       this.filterData(res.data.existingPayments,searchKey)
     }                 

@@ -19,7 +19,7 @@ export default class PaymentDetails extends Component {
   }
 
   retrievePayments(){
-    axios.get("http://localhost:8000/payments").then(res =>{
+    axios.get("http://localhost:8080/payments").then(res =>{
       if(res.data.success){
         this.setState({
             payment:res.data.existingPayments

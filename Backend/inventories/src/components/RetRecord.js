@@ -16,7 +16,7 @@ componentDidMount(){
 }
 
 retrieveRecords(){
-  axios.get("/records").then(res =>{
+  axios.get("http://localhost:8080/records").then(res =>{
     if(res.data.success){
       this.setState({
         records:res.data.existingRecords
@@ -51,7 +51,7 @@ handleSearchArea = (e) =>{
 
   const searchKey = e.currentTarget.value;
          
-  axios.get("/records").then(res =>{
+  axios.get("http://localhost:8080/records").then(res =>{
     if(res.data.success){
       this.filterData(res.data.existingRecords,searchKey)
 
@@ -86,7 +86,7 @@ handleSearchArea = (e) =>{
             <tr>
               <th scope="col">#</th>
               <th scope="col">patient ID</th>
-              <th scope="col">Patient Name(hr)</th>
+              <th scope="col">Patient Name</th>
               <th scope="col">Patient Type</th>
               <th scope="col">Report type</th>
               <th scope="col">Test Code</th>
