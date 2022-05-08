@@ -21,7 +21,7 @@ import EditPost from './components/EditPost';
 import PostHome from './components/PostHome';
 import PostDetails from './components/PostDetails';
 import RoomHome from './components/RoomHome';
-import CreateRoom from './components/CreateRoom';
+import CreateRoom from './components/Createroom';
 import EditRoom from './components/EditRoom';
 import RoomDetails from './components/RoomDetails';
 import RoomReport from './components/RoomReport';
