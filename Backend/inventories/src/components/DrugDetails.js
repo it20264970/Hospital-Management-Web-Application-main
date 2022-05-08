@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import '../App.css';
+import ReactToPrint from "react-to-print";
 
 
 
@@ -30,43 +31,8 @@ export default class DrugDetails extends Component {
       }
     });
   }
-  onDelete=(id)=>{
-    axios.delete(`/drug/delete/${id}`).then((res)=>{
-      alert("Delete successful");
-      this.retrieveDrugs();
-    })
-  }
-
-  filterData(drugs,searchKey){
-
-    const result = drugs.filter((drug)=>
-      drug.drgname.includes(searchKey)||
-      drug.drgtype.includes(searchKey)||
-      drug.unit.includes(searchKey)||
-      drug.qnt.includes(searchKey)||
-      drug.exp.includes(searchKey)||
-      drug.sup.includes(searchKey)||
-      drug.price.includes(searchKey)
-    )
-
-    this.setState({drug:result})
-
-  }
-
-
   
-  handleSearchArea= (e) =>{
-    const searchKey = e.currentTarget.value;
-
-    axios.get("http://localhost:8000/drugs").then(res =>{
-      if(res.data.success){
-        
-        this.filterData(res.data.existingDrugs,searchKey)
-
-      }
-    });
   
-  }
 
 
 
@@ -82,21 +48,15 @@ export default class DrugDetails extends Component {
 
   render(){
     return(
-      <div className="backgrounddd">
-      <div className="raw">
-        
-        <div className="col-lg-9 mt-2 mb-2">
-        <h2>All Drugs</h2>
-        </div>
-        <div className="col-lg-3 mt-2 mb-2">
-          <input
-          className="form-control" type="search" placeholder="Search" name="searchQuery"
-          onChange={this.handleSearchArea}>
-          </input>
-        </div>
-      </div>
       
-      <table className = "table table-hover">
+      <div>
+           <div className="backgrounddd">
+           <p>Drug Management Report</p>
+           <table className="table">
+          
+        
+
+
              <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -107,7 +67,7 @@ export default class DrugDetails extends Component {
                 <th scope="col">Expiry Date</th>
                 <th scope="col">Supplier</th>
                 <th scope="col">Price</th>
-                <th scope="col">Action</th>
+               
                 </tr>
              </thead>
              <tbody>
@@ -132,13 +92,29 @@ export default class DrugDetails extends Component {
                ))}
              </tbody>
           
-          </table>   
+          </table>  
 
-          <button className = "btn btn-success"><a href = "/add" style={{textDecoration:'none',color:'white'}}>Download as a PDF</a></button>
-          
-          <button type="button" class="btn btn-outline-dark"><a href = "/" style={{textDecoration:'none',color:'red'}}>Cancel</a></button>
-         
+          <ReactToPrint
+          trigger={() => (
+            <button
+              type="button"
+              className="btn btn-danger"
+              style={{ marginInlineStart: "0%" }}
+            >
+              <i className="fa-solid fa-print">  Print this out!</i>
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
 
+        <table
+          className="table table-success table-striped"
+          style={{ marginTop: "40px" }}
+          ref={(Component) => (this.componentRef = Component)}
+          /> 
+
+
+      </div>
       </div>
       
       )

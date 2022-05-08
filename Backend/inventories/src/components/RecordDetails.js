@@ -19,7 +19,7 @@ export default class RecordDetails extends Component {
   }
 
   retrieveRecords(){
-    axios.get("http://localhost:8000/records").then(res =>{
+    axios.get("http://localhost:8080/records").then(res =>{
       if(res.data.success){
         this.setState({
             record:res.data.existingRecords

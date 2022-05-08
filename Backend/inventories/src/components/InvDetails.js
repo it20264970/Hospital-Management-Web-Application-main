@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactToPrint from "react-to-print";
 
 import '../App.css';
 
@@ -39,6 +40,9 @@ export default class InvDetails extends Component {
            <div className="background">
            <p>Inventory Distribution Report</p>
            <table className="table">
+
+          
+
              <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -68,18 +72,34 @@ export default class InvDetails extends Component {
                    <td>{inventory.dateAdded}</td>
                    <td>{inventory.supplier}</td>
                    <td>{inventory.cost}</td>
-                   <td>
-                     
-                   </td>
+                  
                  </tr>
                ))}
              </tbody>
           
           </table>   
 
-          <button className = "btn btn-success"><a href = "/add" style={{textDecoration:'none',color:'white'}}>Download as a PDF</a></button>
+          <ReactToPrint
+          trigger={() => (
+            <button
+              type="button"
+              className="btn btn-danger"
+              style={{ marginInlineStart: "0%" }}
+            >
+              <i className="fa-solid fa-print">  Print this out!</i>
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+
+        <table
+          className="table table-success table-striped"
+          style={{ marginTop: "40px" }}
+          ref={(Component) => (this.componentRef = Component)}
+          />
+
           
-          <button type="button" class="btn btn-outline-dark"><a href = "/" style={{textDecoration:'none',color:'red'}}>Cancel</a></button>
+
          
 
       </div>

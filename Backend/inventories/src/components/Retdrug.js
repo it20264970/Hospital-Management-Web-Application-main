@@ -40,12 +40,12 @@ export default class Retdrug extends Component {
   filterData(drug,searchKey){
 
     const result = drug.filter((drug)=>
-      drug.drgname.includes(searchKey)||
-      drug.drgtype.includes(searchKey)||
+      drug.drgname.toLowerCase().includes(searchKey)||
+      drug.drgtype.toLowerCase().includes(searchKey)||
       drug.unit.includes(searchKey)||
       drug.qnt.includes(searchKey)||
       drug.exp.includes(searchKey)||
-      drug.sup.includes(searchKey)||
+      drug.sup.toLowerCase().includes(searchKey)||
       drug.price.includes(searchKey)
     )
 
@@ -140,7 +140,7 @@ export default class Retdrug extends Component {
           
           </table>   
 
-          <button className = "btn btn-success"><a href = "/drug" style={{textDecoration:'none',color:'white'}}>GENERATE REPORT</a></button>
+          <button className = "btn btn-primary"><a href = "/drug" style={{textDecoration:'none',color:'white'}}>GENERATE REPORT</a></button>
           
          
 
