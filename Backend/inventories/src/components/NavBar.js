@@ -111,8 +111,8 @@ export default class NavBar extends Component {
             Finance
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="add">Add Financial Details</a></li>
+            <li><a class="dropdown-item" href="list">Financial Details List</a></li>
             
             </ul>
                 </li>
@@ -125,8 +125,8 @@ export default class NavBar extends Component {
             Medical Records
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="addd">Add Medical Records</a></li>
+            <li><a class="dropdown-item" href="listt">Medical Records List</a></li>
             
             </ul>
                 </li>

@@ -13,3 +13,17 @@
   background-size: cover;
   background-position: center;
 }
+.backgroundpay{
+  background-image: url("../src/images/fnl.png");
+  padding-bottom: 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.backgroundre{
+  background-image: url("../src/images/Reco.jpg");
+  padding-bottom: 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

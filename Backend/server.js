@@ -8,7 +8,8 @@ const app = express();
 //import routes
 const inventoryRoutes = require('./routes/inventory');
 const drugRoutes = require('./routes/drug');
-
+const paymentRoutes = require('./routes/payments');
+const recordRoutes = require('./routes/records');
 
 //app middleware
 app.use(bodyParser.json());
@@ -17,6 +18,8 @@ app.use(cors());
 //route middleware
 app.use(inventoryRoutes);
 app.use(drugRoutes);
+app.use(paymentRoutes);
+app.use(recordRoutes);
 
 
 const PORT = 8000;

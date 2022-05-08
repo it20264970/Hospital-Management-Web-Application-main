@@ -9,6 +9,14 @@ import Mainhome from './components/Mainhome';
 import Retdrug from './components/Retdrug';
 import CreateDrug from './components/CreateDrug';
 import DrugDetails from './components/DrugDetails';
+import CreatePayment from './components/CreatePayment';
+import CreateRecord from './components/CreateRecord';
+import EditPayment from './components/EditPayment';
+import RetPayment from './components/RetPayment';
+import RetRecord from './components/RetRecord';
+import PaymentDetails from './components/PaymentDetails';
+
+
 
 export default class App extends Component{
   render() {
@@ -25,6 +33,12 @@ export default class App extends Component{
         <Route exact path="/ret" element ={<Retdrug/>}/>
         <Route exact path="/crt" element ={<CreateDrug/>}/>
         <Route exact path="/drug" element ={<DrugDetails/>}/>
+        <Route extact path="/list"  element={<RetPayment/>}></Route>
+        <Route extact path="/listt"  element={<RetRecord/>}></Route>
+        <Route extact path="/add" element={<CreatePayment/>}></Route>
+        <Route extact path="/addd" element={<CreateRecord/>}></Route>
+        <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
+        <Route extact path="/up" element={<PaymentDetails/>}></Route>
 
         </Routes>
       
