@@ -15,7 +15,13 @@ import EditPayment from './components/EditPayment';
 import RetPayment from './components/RetPayment';
 import RetRecord from './components/RetRecord';
 import PaymentDetails from './components/PaymentDetails';
-
+import CreatePost from './components/CreatePost';
+import EditPost from './components/EditPost';
+import Home from './components/Home';
+import NavBar from './components/Navbar';
+import PostDetails from './components/PostDetails';
+import Doctor from './components/Doctor';
+import Details from './components/Details';
 
 
 export default class App extends Component{
@@ -39,7 +45,12 @@ export default class App extends Component{
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
-
+        <Route extact path="/"  element={<Home/>}></Route>
+        <Route extact path="/home1" element={<Details/>}></Route>
+        <Route extact path="/add1" element={<Doctor/>}></Route>
+        <Route extact path="/add" element={<CreatePost/>}></Route>
+        <Route extact path="/edit/:id" element ={<EditPost/>}></Route>
+        <Route extact path="/post/:id" element={<PostDetails/>}></Route>
         </Routes>
       
 
