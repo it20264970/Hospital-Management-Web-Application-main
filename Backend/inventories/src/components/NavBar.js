@@ -55,8 +55,8 @@ export default class NavBar extends Component {
             Patients
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="/addPost">Add Patient Details</a></li>
+            <li><a class="dropdown-item" href="/postHome">Patient Details List</a></li>
             
             </ul>
                 </li>
@@ -83,8 +83,8 @@ export default class NavBar extends Component {
             Room
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="/add">Add Inventory</a></li>
-            <li><a class="dropdown-item" href="/det">Inventory List</a></li>
+            <li><a class="dropdown-item" href="/addRoom">Add Room Details</a></li>
+            <li><a class="dropdown-item" href="/roomHome">Room Details List</a></li>
             
             </ul>
                 </li>

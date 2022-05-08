@@ -10,6 +10,8 @@ const inventoryRoutes = require('./routes/inventory');
 const drugRoutes = require('./routes/drug');
 const paymentRoutes = require('./routes/payments');
 const recordRoutes = require('./routes/records');
+const postRoutes = require('./routes/posts');
+const roomRoutes = require('./routes/rooms');
 
 //app middleware
 app.use(bodyParser.json());
@@ -20,6 +22,8 @@ app.use(inventoryRoutes);
 app.use(drugRoutes);
 app.use(paymentRoutes);
 app.use(recordRoutes);
+app.use(postRoutes);
+app.use(roomRoutes);
 
 
 const PORT = 8000;
