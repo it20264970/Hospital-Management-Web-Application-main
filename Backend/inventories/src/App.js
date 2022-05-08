@@ -23,6 +23,8 @@ import RoomHome from './components/RoomHome';
 import CreateRoom from './components/CreateRoom';
 import EditRoom from './components/EditRoom';
 import RoomDetails from './components/RoomDetails';
+import RoomReport from './components/RoomReport';
+import PostReport from './components/PostReport';
 
 
 
@@ -55,6 +57,8 @@ export default class App extends Component{
         <Route extact path="/addPost" element={<CreatePost/>}></Route>
         <Route extact path="/editPost/:id" element ={<EditPost/>}></Route>
         <Route extact path="/post/:id" element={<PostDetails/>}></Route>
+        <Route extact path="/roomReport" element={<RoomReport/>}></Route>
+        <Route extact path="/postReport" element={<PostReport/>}></Route>
 
         </Routes>
       

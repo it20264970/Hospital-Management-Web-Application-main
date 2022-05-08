@@ -2,7 +2,7 @@ import React, {Component } from 'react';
 import axios from 'axios';
 import '../App.css';
 
-import jsPDF from "jspdf";
+
 
 export default class PostHome extends Component {
 constructor(props){
@@ -14,14 +14,7 @@ constructor(props){
 
 } 
 
-generatePDF = ()=>{
-  var doc = new jsPDF("p", "pt", "a3", "pdf");
-  doc.html(document.querySelector('#content'),{
-         callback: function(pdf){
-             pdf.save("mypdf.pdf");
-         }
-  });
-};
+
 
 componentDidMount(){
   this.retrievePosts();
@@ -135,7 +128,7 @@ handleSearchArea = (e) =>{
 
         <button className="btn btn-success"><a href="/addPost" style={{textDecoration:'none',color:'white'}}>Register New Patient</a></button>
 
-        <button className="btn btn-primary" onClick={this.generatePDF} type="primary">Generate Report</button>
+        <button className="btn btn-primary"><a href="/postReport" style={{textDecoration:'none',color:'white'}}>Generate Details</a></button>
 
       </div>
       </div>

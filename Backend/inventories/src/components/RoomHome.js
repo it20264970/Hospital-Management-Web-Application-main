@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
 import axios from 'axios';
 import '../App.css';
-import jsPDF from "jspdf";
+
 
 export default class RoomHome extends Component {
 constructor(props){
@@ -13,14 +13,7 @@ constructor(props){
 
 } 
 
-generatePDF = ()=>{
-  var doc = new jsPDF("p", "pt", "a3", "pdf");
-  doc.html(document.querySelector('#content'),{
-         callback: function(pdf){
-             pdf.save("mypdf.pdf");
-         }
-  });
-};
+
 
 componentDidMount(){
   this.retrieveRooms();
@@ -133,7 +126,7 @@ handleSearchArea = (e) =>{
 
         <button className="btn btn-success"><a href="/addRoom" style={{textDecoration:'none',color:'white'}}>Enter Room Details</a></button>
         
-        <button className="btn btn-primary" onClick={this.generatePDF} type="primary">Generate Report</button>
+        <button className="btn btn-primary"><a href="/roomReport" style={{textDecoration:'none',color:'white'}}>Generate Details</a></button>
       </div>
       </div>
     )
