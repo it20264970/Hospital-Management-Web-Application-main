@@ -26,7 +26,7 @@ app.use(postRoutes);
 app.use(roomRoutes);
 
 
-const PORT = 8000;
+const PORT = 8080;
 const DB_URL = 'mongodb+srv://thili123:hospital123@hospitalmgmt.gw63c.mongodb.net/hptl?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL,{

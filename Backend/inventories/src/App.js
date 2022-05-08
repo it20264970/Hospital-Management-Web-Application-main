@@ -15,7 +15,6 @@ import EditPayment from './components/EditPayment';
 import RetPayment from './components/RetPayment';
 import RetRecord from './components/RetRecord';
 import PaymentDetails from './components/PaymentDetails';
-import RecordDetails from './components/RecordDetails';
 
 import CreatePost from './components/CreatePost';
 import EditPost from './components/EditPost';
@@ -51,7 +50,6 @@ export default class App extends Component{
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
-        <Route extact path="/dw" element={<RecordDetails/>}></Route>
 
         <Route extact path="/postHome" element={<PostHome/>}></Route>
         <Route extact path="/roomHome" element={<RoomHome/>}></Route>
@@ -64,9 +62,11 @@ export default class App extends Component{
         <Route extact path="/roomReport" element={<RoomReport/>}></Route>
         <Route extact path="/postReport" element={<PostReport/>}></Route>
 
-        </Routes>
-      
 
+
+
+      
+</Routes>
 
 
       </div>

@@ -16,11 +16,11 @@ export default class Home extends Component {
   }
 
   GeneratePDF =()=>{
-    var doc = new jsPDF("landscape", "pt", "a3", "pdf");
-    doc.html(document.querySelector('#content'),{
+    var doc = new jsPDF("landscape", "p", "pt", "a4");
+    doc.html(document.querySelector("#content"),{
         callback: function(pdf){
-          pdf.save("mypdf.pdf")
-          alert("successful");
+          pdf.save("mypdf.pdf");
+          
         }
     })
   }
@@ -54,11 +54,11 @@ export default class Home extends Component {
     const result = inventory.filter((inventory)=>
       inventory.pdtname.toLowerCase().includes(searchKey)||
       inventory.itemNo.includes(searchKey)||
-      inventory.rackNo.includes(searchKey)||
+      inventory.rackNo.toLowerCase().includes(searchKey)||
       inventory.quantity.includes(searchKey)||
-      inventory.category.includes(searchKey)||
+      inventory.category.toLowerCase().includes(searchKey)||
       inventory.dateAdded.includes(searchKey)||
-      inventory.supplier.includes(searchKey)||
+      inventory.supplier.toLowerCase().includes(searchKey)||
       inventory.cost.includes(searchKey)
     )
 
@@ -81,18 +81,6 @@ export default class Home extends Component {
   
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
   render(){
     return(
       <div className="background">
@@ -102,12 +90,14 @@ export default class Home extends Component {
         <h2>All Inventories</h2>
         </div>
         <div className="col-lg-3 mt-2 mb-2">
+          
           <input
           className="form-control" type="search" placeholder="Search" name="searchQuery"
           onChange={this.handleSearchArea}>
           </input>
         </div>
       </div>
+      <div id="content">
       
       <table className = "table table-hover">
              <thead>
@@ -154,10 +144,10 @@ export default class Home extends Component {
           
           </table>   
 
-          <button className = "btn btn-primary" onClick={this.GeneratePDF} type="primary">GENERATE REPORT</button>
+          <button className = "btn btn-primary"><a href="/inventory" style={{textDecoration:'none',color:'white'}}>GENERATE REPORT</a></button>
           
          
-
+          </div>
       </div>
       
       )
