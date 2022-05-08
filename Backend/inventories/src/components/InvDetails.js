@@ -19,7 +19,7 @@ export default class InvDetails extends Component {
   }
 
   retrieveInventories(){
-    axios.get("http://localhost:8000/inventories").then(res =>{
+    axios.get("http://localhost:8080/inventories").then(res =>{
       if(res.data.success){
         this.setState({
             inventory:res.data.existingInventories

@@ -16,6 +16,9 @@ import RetPayment from './components/RetPayment';
 import RetRecord from './components/RetRecord';
 import PaymentDetails from './components/PaymentDetails';
 
+import EditDrug from './components/EditDrug';
+import "bootstrap/dist/css/bootstrap.css";
+
 
 export default class App extends Component{
   render() {
@@ -38,8 +41,9 @@ export default class App extends Component{
         <Route extact path="/addd" element={<CreateRecord/>}></Route>
         <Route extact path="/edit/:id" element ={<EditPayment/>}></Route>
         <Route extact path="/up" element={<PaymentDetails/>}></Route>
+        <Route exact path="/drug" element ={<DrugDetails/>}/>
+        <Route exact path="/edtdrug" element ={<EditDrug/>}/>
 
-      
 </Routes>
 
 
