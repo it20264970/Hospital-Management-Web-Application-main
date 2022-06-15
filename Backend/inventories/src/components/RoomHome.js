@@ -21,7 +21,7 @@ componentDidMount(){
 }
 
 retrieveRooms(){
-  axios.get("http://localhost:8000/rooms").then(res =>{
+  axios.get("http://localhost:8080/rooms").then(res =>{
     if(res.data.success){
       this.setState({
         rooms:res.data.existingRooms
@@ -57,7 +57,7 @@ handleSearchArea = (e) =>{
 
   const searchKey = e.currentTarget.value;
          
-  axios.get("http://localhost:8000/rooms").then(res =>{
+  axios.get("http://localhost:8080/rooms").then(res =>{
     if(res.data.success){
       this.filterData(res.data.existingRooms,searchKey)
     }                 

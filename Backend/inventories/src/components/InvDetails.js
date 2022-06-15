@@ -38,8 +38,26 @@ export default class InvDetails extends Component {
       
          <div>
            <div className="background">
-           <p>Inventory Distribution Report</p>
-           <table className="table">
+           <h2>Inventory Distribution Report</h2>
+          
+           <ReactToPrint
+          trigger={() => (
+            <button
+              type="button"
+              className="btn btn-danger"
+              style={{ marginInlineStart: "0%" }}
+            >
+              <i className="fa-solid fa-print">  Print this out!</i>
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+
+        <table
+          className="table table-success table-striped"
+          style={{ marginTop: "40px" }}
+          ref={(Component) => (this.componentRef = Component)}
+          >
 
           
 
@@ -79,25 +97,7 @@ export default class InvDetails extends Component {
           
           </table>   
 
-          <ReactToPrint
-          trigger={() => (
-            <button
-              type="button"
-              className="btn btn-danger"
-              style={{ marginInlineStart: "0%" }}
-            >
-              <i className="fa-solid fa-print">  Print this out!</i>
-            </button>
-          )}
-          content={() => this.componentRef}
-        />
-
-        <table
-          className="table table-success table-striped"
-          style={{ marginTop: "40px" }}
-          ref={(Component) => (this.componentRef = Component)}
-          />
-
+        
           
 
          

@@ -20,7 +20,7 @@ export default class DrugDetails extends Component {
   }
 
   retrieveDrugs(){
-    axios.get("http://localhost:8000/drugs").then(res =>{
+    axios.get("http://localhost:8080/drugs").then(res =>{
       if(res.data.success){
         this.setState({
             drug:res.data.existingDrugs
@@ -51,8 +51,27 @@ export default class DrugDetails extends Component {
       
       <div>
            <div className="backgrounddd">
-           <p>Drug Management Report</p>
-           <table className="table">
+           <h2>Drug Management Report</h2>
+           
+          
+
+           <ReactToPrint
+          trigger={() => (
+            <button
+              type="button"
+              className="btn btn-danger"
+              style={{ marginInlineStart: "0%" }}
+            >
+              <i className="fa-solid fa-print">  Print this out!</i>
+            </button>
+          )}
+          content={() => this.componentRef}
+        />
+
+        <table
+          className="table table-success table-striped"
+          style={{ marginTop: "40px" }}
+          ref={(Component) => (this.componentRef = Component)}>
           
         
 
@@ -85,39 +104,22 @@ export default class DrugDetails extends Component {
                    <td>{drug.sup}</td>
                    <td>{drug.price}</td>
                    
-                   <td>
-                       </td>
-                     
+                   
                  </tr>
                ))}
              </tbody>
           
           </table>  
 
-          <ReactToPrint
-          trigger={() => (
-            <button
-              type="button"
-              className="btn btn-danger"
-              style={{ marginInlineStart: "0%" }}
-            >
-              <i className="fa-solid fa-print">  Print this out!</i>
-            </button>
-          )}
-          content={() => this.componentRef}
-        />
-
-        <table
-          className="table table-success table-striped"
-          style={{ marginTop: "40px" }}
-          ref={(Component) => (this.componentRef = Component)}
-          /> 
-
-
-      </div>
-      </div>
+         
+               
+</div>
+               
+               </div>
+               
+     
       
-      )
+      );
        }
       }
        

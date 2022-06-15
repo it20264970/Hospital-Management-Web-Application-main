@@ -99,7 +99,8 @@ export default class Home extends Component {
       </div>
       <div id="content">
       
-      <table className = "table table-hover">
+      <table className = "table table-success table-striped">
+        
              <thead>
                 <tr>
                 <th scope="col">#</th>

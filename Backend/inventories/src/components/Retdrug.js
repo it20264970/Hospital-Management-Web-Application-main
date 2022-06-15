@@ -19,7 +19,7 @@ export default class Retdrug extends Component {
   }
 
   retrieveDrugs(){
-    axios.get("http://localhost:8000/drugs").then(res =>{
+    axios.get("http://localhost:8080/drugs").then(res =>{
       if(res.data.success){
         this.setState({
             drug:res.data.existingDrugs
@@ -58,7 +58,7 @@ export default class Retdrug extends Component {
   handleSearchArea= (e) =>{
     const searchKey = e.currentTarget.value;
 
-    axios.get("http://localhost:8000/drugs").then(res =>{
+    axios.get("http://localhost:8080/drugs").then(res =>{
       if(res.data.success){
         
         this.filterData(res.data.existingDrugs,searchKey)
@@ -96,7 +96,7 @@ export default class Retdrug extends Component {
         </div>
       </div>
       
-      <table className = "table table-hover">
+      <table className = "table table-success table-striped">
              <thead>
                 <tr>
                 <th scope="col">#</th>

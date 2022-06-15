@@ -19,7 +19,7 @@ componentDidMount(){
 }
 
 retrieveRooms(){
-  axios.get("http://localhost:8000/rooms").then(res =>{
+  axios.get("http://localhost:8080/rooms").then(res =>{
     if(res.data.success){
       this.setState({
         rooms:res.data.existingRooms

@@ -19,7 +19,7 @@ export default class PostReport extends Component {
     }
     
     retrievePosts(){
-      axios.get("http://localhost:8000/posts").then(res =>{
+      axios.get("http://localhost:8080/posts").then(res =>{
         if(res.data.success){
           this.setState({
             posts:res.data.existingPosts

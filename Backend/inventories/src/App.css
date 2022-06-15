@@ -27,3 +27,10 @@
   background-size: cover;
   background-position: center;
 }
+
+.home {
+  background-image: url("../src/Images/hos.jpeg");
+  padding-bottom: 48%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
